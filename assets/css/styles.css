@@ -1,0 +1,57 @@
+body {
+				font-size: 67.5%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				background-image: url("../images/wood_background.jpeg");
+				background-size: cover;
+}
+
+body .list-container {
+				display: flex;
+				flex-direction: column;
+}
+
+body .list-container .list-title {
+				text-align: center;
+				font-size: 3rem;
+				color: #fff;
+}
+
+body .list-container #toDoInput {
+				align-self: center;
+}
+
+body .list-container #addToDo {
+				align-self: center;
+				width: 50%;
+}
+
+body .list-container #list {
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+				width: 300px;
+				margin-bottom: 0;
+				margin-top: 0px;
+				background-image: url("../images/notebook_background.gif");
+				background-size: cover;
+				padding-left: 150px;
+				padding-top: 20px;
+				overflow: scroll;
+}
+
+body .list-container #list .trash {
+				position: absolute;
+				left: -10%;
+				width: 10%;
+}
+
+body .list-container #list .list-item {
+				width: 100%;
+				list-style-type: none;
+				margin: 4px auto;
+				position: relative;
+}
+
+/*# sourceMappingURL=styles.css.map */
