@@ -44,6 +44,8 @@ function addToDoItem(e) {
 
     lastAddedItemRemove.addEventListener('click', removeTodoItem, false);
 
+
+    lastAddedItem.addEventListener('mouseleave', itemAnimations);
     lastAddedItem.addEventListener('mouseleave', itemAnimations);
 
 
