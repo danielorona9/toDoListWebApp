@@ -39,7 +39,10 @@ function addToDoItem(e) {
 
     toDoInput.value = '';
 
+    let lastAddedItemRemove = toDoList.lastChild.firstChild;
     let lastAddedItem = toDoList.lastChild;
+
+    lastAddedItemRemove.addEventListener('click', removeTodoItem, false);
 
     lastAddedItem.addEventListener('mouseleave', itemAnimations);
 
