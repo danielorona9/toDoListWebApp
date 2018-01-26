@@ -7,6 +7,16 @@ function removeTodoItem(e) {
   });
 } //end of removeToDoItem
 
+function itemComplete(e) {
+  let completedItem = e.target;
+
+  if (!completedItem.classList.contains('completed')) {
+    completedItem.classList.add('completed');
+  } else if (completedItem.classList.contains('completed')) {
+    completedItem.classList.remove('completed');
+  }
+} //end of itemComplete
+
 // handlers for existing list items
 let trash = document.getElementsByClassName('trash');
 
@@ -15,7 +25,8 @@ for (let todoItemTrash of trash) {
 } // end of for of loop
 
 for (let item of listItem) {
-
+  item.addEventListener('click', itemComplete, false);
+  
   item.addEventListener('mouseenter', function(e) {
     let item = e.target;
     let icon = e.target.firstChild.nextSibling.firstChild;

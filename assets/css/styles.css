@@ -75,6 +75,11 @@ body .list-container #list .list-item {
 				position: relative;
 }
 
+body .list-container .completed {
+				text-decoration: line-through;
+				list-style-type: none;
+}
+
 .faedin {
 				animation-name: fadein;
 				animation-duration: 2s;
