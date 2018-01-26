@@ -26,18 +26,22 @@ for (let todoItemTrash of trash) {
 
 for (let item of listItem) {
   item.addEventListener('click', itemComplete, false);
-  
+
   item.addEventListener('mouseenter', function(e) {
     let item = e.target;
     let icon = e.target.firstChild.nextSibling.firstChild;
     icon.classList.remove('fadeout');
+    item.classList.remove('slidein');
     icon.classList.add('fa-minus-circle', 'fadein');
+    item.classList.add('slideout');
   }); //end of item mouseenter event handler
 
   item.addEventListener('mouseleave', function(e) {
     let item = e.target;
     let icon = e.target.firstChild.nextSibling.firstChild;
     icon.classList.remove('fadein');
+    item.classList.remove('slideout');
     icon.classList.add('fadeout');
+    item.classList.add('slidein');
   }); //end of item mouseleave event handler
 } // end of for of loop

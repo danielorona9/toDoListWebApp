@@ -80,6 +80,36 @@ body .list-container .completed {
 				list-style-type: none;
 }
 
+.slideout {
+				animation-name: slideout;
+				animation-duration: 1s;
+				animation-fill-mode: forwards;
+}
+
+@keyframes slideout {
+				0% {
+								padding-left: 10px;
+				}
+				100% {
+								padding-left: 20px;
+				}
+}
+
+.slidein {
+				animation-name: slidein;
+				animation-duration: 1s;
+				animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+				0% {
+								padding-left: 20px;
+				}
+				100% {
+								padding-left: 0;
+				}
+}
+
 .faedin {
 				animation-name: fadein;
 				animation-duration: 2s;
