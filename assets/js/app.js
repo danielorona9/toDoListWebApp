@@ -1,4 +1,47 @@
 let listItem = document.getElementsByClassName('list-item');
+let toDoList = document.getElementById('list');
+let btnAddToDo = document.getElementById('addToDo');
+let toDoInput = document.getElementById('toDoInput');
+
+//add item todo event handlers
+btnAddToDo.addEventListener('click', addToDoItem, false);
+toDoInput.addEventListener('keypress', function(e) {
+  if (toDoInput.value === ' ') {
+    alert('Please enter a todo item.');
+  } else {
+    if (e.which === 13) {
+      addToDoItem();
+    }
+  }
+
+}, false); //end of toDoInput event handler
+
+function addToDoItem(e) {
+  if (toDoInput.value === '') {
+    alert('Please enter a todo item.');
+  } //and of if
+  else {
+    let itemNode = document.createElement('li');
+    itemNode.classList.add('list-item');
+    itemNode.innerHTML = toDoInput.value
+    itemNode.classList.add('slidein');
+
+    let trashIconNode = document.createElement('i');
+    trashIconNode.setAttribute("aria-hidden", true);
+    trashIconNode.classList.add('fadeout');
+
+    let spanNode = document.createElement('span');
+    spanNode.classList.add('trash');
+    spanNode.appendChild(trashIconNode);
+
+    itemNode.prepend(spanNode);
+    toDoList.appendChild(itemNode);
+
+    toDoInput.value = '';
+
+  } //end of else
+} //end of addToDoItem
+
 //remove todo item function
 function removeTodoItem(e) {
   let todoItem = e.target.parentNode.parentNode;
