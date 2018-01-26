@@ -39,8 +39,30 @@ function addToDoItem(e) {
 
     toDoInput.value = '';
 
+    let lastAddedItem = toDoList.lastChild;
+
+    lastAddedItem.addEventListener('mouseleave', itemAnimations);
+
+
   } //end of else
 } //end of addToDoItem
+
+function itemAnimations(e) {
+  let icon = e.target.firstChild.firstChild;
+  let item = e.target;
+
+  if (icon.classList.contains('fadeout') && item.classList.contains('slidein') ) {
+    icon.classList.remove('fadeout');
+    item.classList.remove('slidein');
+    icon.classList.add('fadein', 'fa-minus-circle');
+    item.classList.add('slideout');
+  } else if (icon.classList.contains('fadein') && item.classList.contains('slideout')) {
+    icon.classList.remove('fadein');
+    item.classList.remove('slideout');
+    icon.classList.add('fadeout');
+    item.classList.add('slidein');
+  }
+}// end of itemAnimations
 
 //remove todo item function
 function removeTodoItem(e) {
