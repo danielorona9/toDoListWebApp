@@ -10,35 +10,106 @@ body {
 body .list-container {
 				display: flex;
 				flex-direction: column;
+				width: 35%;
 }
 
 body .list-container .list-title {
 				text-align: center;
-				font-size: 3rem;
+				font-size: 3vw;
 				color: #fff;
+}
+
+@media (max-width: 700px) {
+				body .list-container .list-title {
+								margin-left: 15%;
+				}
+}
+
+@media (min-width: 1160px) and (max-width: 1299px) {
+				body .list-container .list-title {
+								margin-left: 9%;
+				}
 }
 
 body .list-container #toDoInput {
 				align-self: center;
+				width: 50%;
+				height: 5%;
+}
+
+@media (max-width: 700px) {
+				body .list-container #toDoInput {
+								margin-left: 15%;
+				}
+}
+
+@media (min-width: 1500px) and (max-width: 2000px) {
+				body .list-container #toDoInput {
+								margin-left: 4%;
+				}
+}
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+				body .list-container #toDoInput {
+								margin-left: 6%;
+				}
+}
+
+@media (min-width: 1160px) and (max-width: 1299px) {
+				body .list-container #toDoInput {
+								margin-left: 9%;
+				}
 }
 
 body .list-container #addToDo {
 				align-self: center;
 				width: 50%;
+				height: 6%;
+				font-size: 1vw;
+}
+
+@media (max-width: 700px) {
+				body .list-container #addToDo {
+								margin-left: 15%;
+				}
+}
+
+@media (min-width: 1500px) and (max-width: 2000px) {
+				body .list-container #addToDo {
+								margin-left: 4%;
+				}
+}
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+				body .list-container #addToDo {
+								margin-left: 6%;
+				}
+}
+
+@media (min-width: 1160px) and (max-width: 1299px) {
+				body .list-container #addToDo {
+								margin-left: 9%;
+				}
 }
 
 body .list-container #list {
 				display: flex;
 				flex-direction: column;
 				height: 100%;
-				width: 300px;
-				margin-bottom: 0;
+				width: 100%;
+				margin-bottom: 0px;
 				margin-top: 0px;
+				padding-top: 2rem;
 				background-image: url("../images/notebook_background.gif");
 				background-size: cover;
-				padding-left: 150px;
-				padding-top: 20px;
 				overflow: scroll;
+				align-self: center;
+}
+
+@media (max-width: 1150px) {
+				body .list-container #list {
+								margin-right: 20%;
+				}
 }
 
 body .list-container #list .trash {
@@ -57,6 +128,13 @@ body .list-container #list .trash .fa-minus-circle {
 				top: 2px;
 }
 
+@media (max-width: 500px) {
+				body .list-container #list .trash .fa-minus-circle {
+								width: 4px;
+								height: 2px;
+				}
+}
+
 body .list-container #list .trash .fa-minus-circle:after {
 				content: "";
 				position: absolute;
@@ -68,11 +146,54 @@ body .list-container #list .trash .fa-minus-circle:after {
 				border-right: 0.5px solid #fff;
 }
 
+@media (max-width: 500px) {
+				body .list-container #list .trash .fa-minus-circle:after {
+								top: 1px;
+								width: 3px;
+				}
+}
+
 body .list-container #list .list-item {
-				width: 100%;
 				list-style-type: none;
-				margin: 4px auto;
+				margin: .2rem 2% .2rem 35%;
 				position: relative;
+				font-size: 1vw;
+}
+
+@media (max-width: 500px) {
+				body .list-container #list .list-item {
+								margin: .2rem 2% .2rem 45%;
+				}
+}
+
+@media (min-width: 501px) {
+				body .list-container #list .list-item {
+								margin: .2rem 2% .2rem 54%;
+				}
+}
+
+@media (max-width: 700px) {
+				body .list-container #list .list-item {
+								margin: .2rem 2% .2rem 44%;
+				}
+}
+
+@media (min-width: 701px) {
+				body .list-container #list .list-item {
+								margin: .2rem 2% .2rem 35%;
+				}
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+				body .list-container #list .list-item {
+								margin: .2rem 2% .2rem 28%;
+				}
+}
+
+@media (min-width: 1200px) {
+				body .list-container #list .list-item {
+								margin: .2rem 2% .2rem 25%;
+				}
 }
 
 body .list-container .completed {
