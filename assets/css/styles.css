@@ -1,317 +1,167 @@
 body {
-				font-size: 67.5%;
-				height: 100%;
-				display: flex;
-				justify-content: center;
-				background-image: url("../images/wood_background.jpeg");
-				background-size: cover;
+  font-size: 67.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-image: url("../images/wood_background.jpeg");
+  background-size: cover;
 }
 
-body .list-container {
-				display: flex;
-				flex-direction: column;
-				width: 35%;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
 }
 
-body .list-container .list-header-container {
-				display: flex;
-				flex-direction: column;
-				align-self: center;
-				width: 100%;
-				height: auto;
-				padding-bottom: 1%;
+.container .list-header-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 100%;
+  height: auto;
+  padding-bottom: 1%;
+  text-align: center;
 }
 
-@media (min-width: 400px) {
-				body .list-container .list-header-container {
-								margin-left: 44%;
-				}
+.container .list-header-container .list-title {
+  font-size: 3vw;
+  color: #fff;
 }
 
-@media (min-width: 500px) and (min-height: 500px) and (max-height: 999px) {
-				body .list-container .list-header-container {
-								margin-left: 25%;
-				}
+.container .list-header-container #toDoInput {
+  align-self: center;
+  width: 50%;
 }
 
-@media (min-width: 600px) and (max-width: 799px) and (min-height: 500px) and (max-height: 999px) {
-				body .list-container .list-header-container {
-								margin-left: 14%;
-				}
+.container .list-header-container #addToDo {
+  align-self: center;
+  width: 50%;
+  font-size: 1vw;
+  margin-bottom: .5%;
+  background-color: #cc9e2c;
 }
 
-@media (min-width: 800px) and (max-width: 1150px) and (min-height: 500px) and (max-height: 999px) {
-				body .list-container .list-header-container {
-								margin-left: 5%;
-				}
+.container .list-container {
+  background-color: wheat;
+  background-size: cover;
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media (min-width: 1400px) and (min-height: 500px) and (max-height: 999px) {
-				body .list-container .list-header-container {
-								margin-left: 10%;
-				}
+.container .list-container #list {
+  width: 74%;
+  padding-top: 2rem;
+  padding-left: 0;
+  list-style: none;
 }
 
-@media (min-width: 1700px) and (min-height: 500px) and (max-height: 999px) {
-				body .list-container .list-header-container {
-								margin-left: 2%;
-				}
+.container .list-container #list .list-item {
+  list-style-type: none;
+  margin: 5% 2% 0.2rem 0;
+  position: relative;
+  font-size: 1.7vw;
+  text-align: left;
+  border-bottom: .5px solid red;
 }
 
-body .list-container .list-header-container .list-title {
-				text-align: center;
-				font-size: 3vw;
-				color: #fff;
+.container .list-container #list .list-item .trash {
+  position: absolute;
+  left: -10%;
+  width: 10%;
 }
 
-body .list-container .list-header-container #toDoInput {
-				align-self: center;
-				width: 50%;
-				height: 5%;
+.container .list-container #list .list-item .trash .fa-minus-circle {
+  position: absolute;
+  border: 0.1px transparent solid;
+  width: 9px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #FF0000;
+  top: 2px;
 }
 
-body .list-container .list-header-container #addToDo {
-				align-self: center;
-				width: 50%;
-				height: 18%;
-				font-size: 1vw;
-				margin-bottom: .5%;
-				background-color: #cc9e2c;
+.container .list-container #list .list-item .trash .fa-minus-circle:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0.8px;
+  width: 7px;
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
+  border-right: 0.5px solid #fff;
 }
 
-@media (min-width: 400px) {
-				body .list-container .list-header-container #addToDo {
-								height: 2%;
-				}
-}
-
-@media (min-width: 700px) {
-				body .list-container .list-header-container #addToDo {
-								height: 4%;
-				}
-}
-
-@media (min-width: 900px) {
-				body .list-container .list-header-container #addToDo {
-								height: 6%;
-				}
-}
-
-@media (min-width: 1000px) {
-				body .list-container .list-header-container #addToDo {
-								height: 10%;
-				}
-}
-
-@media (min-width: 1300px) {
-				body .list-container .list-header-container #addToDo {
-								height: 12%;
-				}
-}
-
-@media (min-width: 1500px) {
-				body .list-container .list-header-container #addToDo {
-								height: 16%;
-				}
-}
-
-@media (min-width: 1800px) {
-				body .list-container .list-header-container #addToDo {
-								height: 20%;
-				}
-}
-
-body .list-container #list {
-				display: flex;
-				flex-direction: column;
-				height: 100%;
-				width: 100%;
-				margin-bottom: 0;
-				margin-top: 0;
-				padding-top: 2rem;
-				background-image: url("../images/notebook_background.gif");
-				background-size: cover;
-				overflow: scroll;
-				align-self: center;
-}
-
-@media (max-width: 1150px) {
-				body .list-container #list {
-								margin-right: 20%;
-				}
-}
-
-body .list-container #list .trash {
-				position: absolute;
-				left: -10%;
-				width: 10%;
-}
-
-body .list-container #list .trash .fa-minus-circle {
-				position: absolute;
-				border: 0.1px transparent solid;
-				width: 9px;
-				height: 7px;
-				border-radius: 50%;
-				background-color: #FF0000;
-				top: 2px;
-}
-
-@media (max-width: 500px) {
-				body .list-container #list .trash .fa-minus-circle {
-								width: 4px;
-								height: 2px;
-				}
-}
-
-@media (min-width: 1300px) {
-				body .list-container #list .trash .fa-minus-circle {
-								top: 4px;
-				}
-}
-
-@media (min-width: 1650px) {
-				body .list-container #list .trash .fa-minus-circle {
-								top: 6px;
-				}
-}
-
-@media (min-width: 1850px) {
-				body .list-container #list .trash .fa-minus-circle {
-								top: 8px;
-				}
-}
-
-body .list-container #list .trash .fa-minus-circle:after {
-				content: "";
-				position: absolute;
-				top: 3px;
-				left: 0.8px;
-				width: 7px;
-				background-color: #fff;
-				border-bottom: 1px solid #fff;
-				border-right: 0.5px solid #fff;
-}
-
-@media (max-width: 500px) {
-				body .list-container #list .trash .fa-minus-circle:after {
-								top: 1px;
-								width: 3px;
-				}
-}
-
-body .list-container #list .list-item {
-				list-style-type: none;
-				margin: 0.2rem 2% 0.2rem 35%;
-				position: relative;
-				font-size: 1vw;
-}
-
-@media (min-width: 500px) {
-				body .list-container #list .list-item {
-								margin: 0.2rem 2% 0.2rem 45%;
-				}
-}
-
-@media (max-width: 500px) {
-				body .list-container #list .list-item {
-								margin: 0.2rem 2% 0.2rem 45%;
-				}
-}
-
-@media (min-width: 501px) {
-				body .list-container #list .list-item {
-								margin: 0.2rem 2% 0.2rem 54%;
-				}
-}
-
-@media (max-width: 700px) {
-				body .list-container #list .list-item {
-								margin: 0.2rem 2% 0.2rem 44%;
-				}
-}
-
-@media (min-width: 701px) {
-				body .list-container #list .list-item {
-								margin: 0.2rem 2% 0.2rem 35%;
-				}
-}
-
-@media (min-width: 1000px) and (max-width: 1199px) {
-				body .list-container #list .list-item {
-								margin: 0.2rem 2% 0.2rem 28%;
-				}
-}
-
-@media (min-width: 1200px) {
-				body .list-container #list .list-item {
-								margin: 0.2rem 2% 0.2rem 25%;
-				}
-}
-
-body .list-container .completed {
-				text-decoration: line-through;
-				list-style-type: none;
+.completed {
+  text-decoration: line-through;
+  list-style-type: none;
 }
 
 .slideout {
-				animation-name: slideout;
-				animation-duration: 1s;
-				animation-fill-mode: forwards;
+  animation-name: slideout;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes slideout {
-				0% {
-								padding-left: 10px;
-				}
-				100% {
-								padding-left: 20px;
-				}
+  0% {
+    padding-left: 10px;
+  }
+  100% {
+    padding-left: 20px;
+  }
 }
 
 .slidein {
-				animation-name: slidein;
-				animation-duration: 1s;
-				animation-fill-mode: forwards;
+  animation-name: slidein;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes slidein {
-				0% {
-								padding-left: 20px;
-				}
-				100% {
-								padding-left: 0;
-				}
+  0% {
+    padding-left: 20px;
+  }
+  100% {
+    padding-left: 0;
+  }
 }
 
 .faedin {
-				animation-name: fadein;
-				animation-duration: 2s;
-				animation-fill-mode: forwards;
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
 .fadeout {
-				animation-name: fadeout;
-				animation-duration: 2s;
-				animation-fill-mode: forwards;
+  animation-name: fadeout;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadein {
-				0% {
-								opacity: 0.0;
-				}
-				100% {
-								opacity: 1;
-				}
+  0% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeout {
-				0% {
-								opacity: 1;
-				}
-				100% {
-								opacity: 0.00;
-				}
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.00;
+  }
 }
-
 /*# sourceMappingURL=styles.css.map */
